@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    --dark: #0a0a0a;
+    --light: #eee;
+    --lightSec: #ccc;
+    --special: lightblue;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark);   
+    color: var(--light); 
+}
+
+.container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 2px 2px 5px var(--special),
+                -2px -2px 5px var(--special),
+                inset 1px 1px 10px var(--light);
+}
+.container h2 {
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.container input.pass {
+    margin-bottom: 40px;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 3px;
+    color: var(--special);
+    border: 1px solid currentColor;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.25rem;
+}
+.container input.pass::placeholder {
+    color: #696868;
+}
+.container .passBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: 10px auto;
+}
+.container .passBox label {
+    width: 50%;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.container .passBox input {
+    width: 50%;
+}
+.container .passBox input.passLength {
+    padding: 3px 10px;
+    color: var(--light);
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition: .35s;
+}
+.container .passBox input.passLength:focus {
+    color: var(--special);
+}
+.container button#generate {
+    margin-top: 60px;
+    padding: 4px 25px;
+    outline: none;
+    border-radius: 3px;
+    color: var(--light);
+    border: 2px solid currentColor;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: .35s;
+    cursor: pointer;
+}
+.container button#generate:hover {
+    color: lightblue;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+a {
+    color: #878787;
+    text-decoration: none;
+    transition: .2s;
+}
+a:hover {
+    color: #ccc;
+}
+
+@media (max-width: 550px) {
+    .container {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        min-width: auto;
+    }
+    .container .passBox {
+        width: 80%;
+    }
+}

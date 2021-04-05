@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    <title>drawApp</title>
+</head>
+<body>
+    <nav id="menu">
+        <span class="logo">drawApp</span>
+        <div class="tools">
+            <div class="tool">
+                <label for="pencilColor">Pencil color</label>
+                <input type="color" id="pencilColor" value="#000000">
+            </div>
+            <div class="tool">
+                <label for="bgcColor">Background color</label>
+                <input type="color" id="bgcColor" value="#ffffff">
+            </div>
+            <div class="tool">
+                <label for="pencilSize">Pencil size</label>
+                <input type="number" id="pencilSize" value="8">
+            </div>
+        </div>
+        <div class="canvasOpt">
+            <button id="clear">Clear</button>
+            <button id="save">Save</button>
+        </div>
+    </nav>
+
+    <script src="./script/main.js"></script>
+</body>
+</html>

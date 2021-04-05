@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--oth1);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--searchBox);
+}
+
+html {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    --dark: #010101;
+    --seconDark: #050505;
+    --thirdDark: #121414;
+    --txt: #eee;
+    --oth1: #5864A7;
+    --searchBox: #3d3e3f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark);
+    color: var(--txt);
+}
+i {
+    color: var(--txt);
+    transition: .35s;
+    cursor: pointer;
+}
+i:hover {
+    color: var(--oth1);
+}
+.hidden {
+    display: none !important;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 650px;
+    margin: 80px auto;
+    background-color: var(--dark);
+    box-shadow: 1px 1px 10px 2px var(--oth1);
+}
+h2 {
+    display: inline-block;
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    padding: 15px 0;
+    color: var(--dark);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .4s;
+}
+h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/btnBG.png');
+    background-size: cover;
+    transform-origin: left;
+    transition: .4s;
+}
+h2 span {
+    position: relative;
+    transition: .4s;
+    z-index: 1;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 100%;
+    height: inherit;
+    padding: 20px;
+    background-color: var(--thirdDark);
+    overflow-y: auto;
+}
+.content .add {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--txt);
+}
+.add .addInp {
+    display: flex;
+    align-items: center;
+}
+.add .addInp input {
+    width: 215px;
+    padding: 7px 15px;
+    outline: none;
+    border-radius: 5px;
+    color: inherit;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    font-size: 1.25rem;
+}
+.add .addInp input:focus {
+    color: var(--oth1);
+}
+.add .addInp input::placeholder {
+    color: inherit;
+    font-size: 0.85rem;
+}
+.add .addInp i {
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: var(--oth1);
+    color: var(--thirdDark);
+    text-align: center;
+}
+.add .addInp i:hover {
+    color: var(--txt);
+}
+.taskList {
+    width: 100%;
+    margin: 50px auto;
+}
+.taskList .task {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 25px auto;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--oth1);
+}
+.taskList .task:nth-child(1) {
+    margin-top: 0;
+}
+.taskList .task span {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.taskList .task span i {
+    position: absolute;
+    right: 0;
+    padding-right: 3px;
+}
+.taskList .task span i.taskEdit {
+    right: 50px;
+}
+.taskList .task span i:hover {
+    color: var(--dark);
+}
+
+.container p {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: var(--thirdDark);
+    font-size: 12px;
+    text-align: center;
+}
+.container p a {
+    color: var(--oth1);
+    text-decoration: none;
+    transition: .35s;
+    cursor: pointer;
+}
+.container p a:hover {
+    color: var(--searchBox);
+}
+
+
+@media(max-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .taskList .task {
+        box-sizing: border-box;
+        width: 80%;
+        min-width: 300px;
+        border-radius: 6px;
+    }
+    .taskList .task span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 1.3rem;
+        cursor: pointer;
+    } 
+}
+@media(max-width: 700px) {
+    .content .add {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: var(--txt);
+    }
+    .add .addInp {
+        margin-top: 30px;
+    }
+    .add .addInp i {
+        margin-left: 20px;;
+    }
+    .taskList .task {
+        width: 90%;
+    }
+}
+@media(max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+
+    .taskList .task {
+        min-width: 280px;
+    }
+}
