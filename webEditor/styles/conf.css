@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main: #8458b3;
+    --sec: #494d5f;
+    --txt: #e5eaf5;
+    --ext: #d0bdf4;
+}
+::-webkit-scrollbar {               /* width */
+    width: 12px;
+}
+::-webkit-scrollbar-track {         /* Track */
+    background: var(--txt);
+}
+::-webkit-scrollbar-thumb {         /* Handle */
+    background: var(--ext);
+}
+::-webkit-scrollbar-thumb:hover {   /* Handle on hover */
+    background: #9885bb;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--sec);
+    color: var(--txt);
+}
+h1,h2,h3,h4,h5,h6,.brand {
+    font-family: 'Roboto Slab', serif;
+}
+a {
+    text-decoration: none;
+    color: var(--ext);
+}
+.btn-primary {
+    padding: 10px 25px;
+    background-color: var(--main);
+    color: var(--txt);
+    border-radius: 2px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.btn-primary:hover {
+    background-color: var(--ext);
+    color: var(--main);
+}

@@ -1,0 +1,235 @@
+@import url("./conf.css");
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main);
+    color: var(--txt);
+}
+.navbar .brand {
+    width: 25%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.navbar .menu-list {
+    width: 75%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    font-size: 1.15rem;
+}
+.navbar .menu-list li {
+    line-height: 60px;
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.navbar .menu-list li a {
+    display: inline-block; 
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+.navbar .menu-list li.editor-link {
+    background-color: #653796;
+}
+.navbar .menu-list li.editor-link:hover {
+    background-color: var(--main);
+    color: var(--txt);
+}
+.navbar .menu-list li:hover {
+    background-color: var(--ext);
+    color: var(--main);
+}
+
+/* HEADER */
+header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+header .header-bgc {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    filter: blur(5px);
+}
+header .header-ctx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+header .header-ctx * {
+    margin: 10px auto;
+}
+header .header-ctx h1 {
+    font-size: 3.65rem;
+}
+header .header-ctx h3 {
+    font-size: 2rem;
+}
+
+/* CONF-EDITOR-FORM */
+.settings {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.settings h2 {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.conf-form {
+    width: 60%;
+    min-width: 450px;
+    max-width: 750px
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    margin: 15px auto;
+}
+.conf-form .row {
+    width: 100%;
+    font-size: 1.2rem;
+}
+.conf-form h3 {
+    margin: 45px 0 15px 0;
+    font-size: 1.7rem;
+}
+.row label  {
+    display: inline-block;
+    width: 50%;
+}
+.row select, input {
+    width: 50%;
+    font-family: inherit;
+    color: var(--ext);
+    border: 2px solid currentColor;
+    background-color: transparent;
+}
+.row-check label {
+    display: inline-block;
+    width: 50%;
+}
+.row-check input {
+    display: flex;
+    justify-content: flex-start;
+    width: 2%;
+}
+.form-row input[type="text"],
+.form-row input[type="number"] {
+    background-color: transparent;
+    color: var(--ext);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--ext);
+    font-family: inherit;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: 140px;
+    padding: 20px 0;
+    text-align: center;
+}
+footer p {
+    padding: 7px 0;
+}
+footer a {
+    font-weight: bolder;
+}
+
+/* MEDIA-QUERIES */
+@media (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }   
+    .row label  {
+        display: inline-block;
+        width: 53%;
+    }
+    .row select, input {
+        width: 46%;
+    }
+    .row-check label {
+        display: inline-block;
+        width: 50%;
+    }
+    .row-check input {
+        display: flex;
+        justify-content: flex-start;
+        width: 10%;
+    }
+}
+@media (max-width: 950px) {
+    header .header-ctx h1 {
+        font-size: 3.3rem;
+    }
+    header .header-ctx h3 {
+        font-size: 1.8rem;
+    }
+    footer {
+        margin-top: 80px;
+    }
+}
+@media (max-width: 550px) {
+    html {
+        font-size: 13px;
+    }
+    .settings h2 {
+        font-size: 2.6rem;
+    }
+    .conf-form {
+        min-width: 300px;
+        padding: 0 15px;
+    }
+    .conf-form h3 {
+        margin-bottom: 30px;
+    }
+    footer {
+        margin-top: 50px;
+    }
+}
+@media(max-width: 500px) {
+    header .header-ctx {
+        padding: 0 20px;
+    }
+    header .header-ctx h1 {
+        font-size: 2.7rem;
+    }
+    header .header-ctx h3 {
+        font-size: 1.5rem;
+    }
+    .settings h2 {
+        font-size: 2.35rem;
+    }
+    .conf-form h3 {
+        font-size: 1.5rem;
+    }
+    footer {
+        margin-top: 30px;
+    }
+}

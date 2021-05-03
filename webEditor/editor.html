@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="./styles/editor.css">
+    <script src="https://kit.fontawesome.com/6ddf83f670.js" crossorigin="anonymous"></script>
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <section class="editor-code-container">
+        <div id="editor" class="editor"></div>
+    
+        <iframe id="preview" class="preview" frameborder="0"></iframe>
+    </section>
+
+    <div id="statusBar" class="statusBar">
+        <div class="myStatubBarConf" id="myStatubBarConf">
+            <a href="./index.html" class="btn homeBtn">
+                Home <i class="fas fa-home"></i>
+            </a>
+            <a id="downloadBtn" class="btn">
+                Download <i class="fas fa-file-download"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS TAGS -->
+    <script src="./src-min/ace.js"></script>
+    <script src="./src-min/ext-statusbar.js"></script>
+    <script src="./src-min/ext-emmet.js"></script>
+    <script src="./src-min/snippets/html.js"></script>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
