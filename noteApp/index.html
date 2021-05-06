@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/noteAppIcon.png">
+    <script src="https://kit.fontawesome.com/4de38f6c06.js" crossorigin="anonymous"></script>
+    <title>noteApp</title>
+</head>
+<body>
+    <nav id="navbar" class="hidden">
+        <div class="logo">
+            <a href="index.html">noteApp</a>
+        </div>
+        <div class="toolBox">
+            <label for="fontSize">Font Size: </label>
+            <input type="number" name="fontSize" id="fontSize" value="24">
+        </div>
+        <div class="toolBox">
+            <label for="fontColor">Font Color: </label>
+            <input type="color" name="fontColor" id="fontColor" value="#000000">
+        </div>
+        <div class="toolBox">
+            <label for="bgColor">Background Color: </label>
+            <input type="color" name="bgColor" id="bgColor" value="#ffffff">
+        </div>
+        <div class="toolBox">
+            <button id="bold">
+                <i class="fas fa-bold"></i>
+            </button>
+            <button id="italic">
+                <i class="fas fa-italic"></i>
+            </button>
+        </div>
+        <select name="font" id="font">
+            <optgroup label="Sans-Serif">
+               <option value="Arial">Arial</option>
+               <option value="Roboto">Roboto</option>
+               <option value="Teko">Teko</option>
+            </optgroup>
+            <optgroup label="Serif">
+               <option value="Times New Roman" selected="selected">Times New Roman</option>
+               <option value="Zilla Slab">Zilla Slab</option>
+               <option value="Noto Serif JP">Noto Serif JP</option>
+            </optgroup>
+            <optgroup label="Mono">
+               <option value="Space Mono">Space Mono</option>
+               <option value="Syne Mono">Syne Mono</option>
+            </optgroup>
+            <optgroup label="Other">
+               <option value="Architects Daughter">Architects Daughter</option>
+               <option value="Indie Flower">Indie Flower</option>
+               <option value="Patrick Hand SC">Patrick Hand SC</option>
+               <option value="Shadows Into Light">Shadows Into Light</option>
+               <option value="ZCOOL QingKe HuangYou">ZCOOL</option>
+            </optgroup>
+        </select>
+        <div class="file">
+            <button id="edit" class="clickBtn">
+                <i class="fas fa-edit"></i>
+                Edit
+            </button>
+            <button id="importNote">
+                <i class="fas fa-file-import"></i>
+                Import
+            </button>
+            <button id="download">
+                <i class="fas fa-file-download"></i>
+                Download
+            </button>
+        </div>
+    </nav>
+    <div id="menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="importFileWindow hidden" id="importFileWindow">
+        <label for="importFile">Wybierz plik do zaimportowania [tylko .txt i .md]</label>
+       <div>
+            <input type="file" id="importFile" name="importFile" enctype="multipart/form-data" accept=".txt, .md">
+            <button id="closeImportFileWindow">
+                <i class="fa fa-times"></i>
+                Close
+            </button>
+       </div>
+    </div>
+
+    <section class="note">
+        <div class="main hidden" id="main"></div>
+        <textarea name="noteArea" id="noteArea" class="noteArea" spellcheck="false" autofocus></textarea>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js" integrity="sha512-BR880yY3jIAdXrEpvj9PcknWXcLGCCG67Kh4BBuJ9PjGGKCyhaZ6gjv2M6qfI3FirhmyC8nfkGCPvhhbAdcXyw==" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
