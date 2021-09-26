@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #0f0;
+    overflow: hidden;
+}
+.terminal {
+    width: 750px;
+    height: 400px;
+    background-color: #001133;
+    border: 2px solid #ccc;
+}
+.appBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    background-color: #00091a;
+}
+.appBar div {
+    margin: 0 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.appBar .min { background-color: #ff9900; }
+.appBar .max { background-color: #0f0; }
+.appBar .close { background-color: #f00; }
+
+.terminalContent {
+    padding: 5px 10px;
+}
+.terminalContent .prefix {
+    color: #96b8fc;
+    padding-bottom: 15px;
+}
+.terminalContent .prefix .path {
+    padding: 0 10px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 15% 50%, 0% 0%);
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.cursor {
+    display: inline-block;
+    width: 4px;
+    height: 15px;
+    background-color: #ccc;
+    opacity: 1;
+    animation: cursorAnimation 0.75s infinite linear;
+}
+@keyframes cursorAnimation {
+    0% {
+        opacity: 1;
+    } 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
